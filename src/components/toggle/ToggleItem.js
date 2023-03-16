@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import ExpandLessOutlinedIcon from "@mui/icons-material/ExpandLessOutlined";
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
-import { width } from "@mui/system";
 
 const ToggleItem = ({ title, body, isNested, icon,items}) => {
   const [expanded, setExpanded] = useState(false);

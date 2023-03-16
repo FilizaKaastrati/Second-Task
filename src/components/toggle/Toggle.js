@@ -36,7 +36,7 @@ const nestedData = [
   ]
 
 const Toggle = () => {
-  const [nestedQuestions, setNestedQuestionss] = useState(nestedData);
+  const [nestedQuestions] = useState(nestedData);
 
   const renderedNestedQuestions = nestedQuestions.map((item, index) => {
     return <ToggleItem key={index} title={item.title} icon={item.icon}  body={item.info} />;
