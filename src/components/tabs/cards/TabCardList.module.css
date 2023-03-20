@@ -1,7 +1,29 @@
 .container {
   display: flex;
-  /* padding: 30px; */
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
+@media only screen and (max-width: 900px) {
+  .container {
+    justify-content: space-between;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+   
+  }
+}
+
+  @media only screen and (max-width: 390px) {
+    .container {
+      justify-content: center;
+      align-self: center;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+  }
+
+

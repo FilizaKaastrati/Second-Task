@@ -2,7 +2,6 @@ import TabnCardItem from "./TabCardItem";
 import clasess from "./TabCardList.module.css";
 function TabCardList(props, index) {
   return (
-    <ul>
         <div className={clasess.container}>
         {props.list.map(card => (
           <TabnCardItem
@@ -14,7 +13,6 @@ function TabCardList(props, index) {
            />
         ))}
       </div>
-    </ul>
   );
 }
 export default TabCardList;

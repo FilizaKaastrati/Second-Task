@@ -1,50 +1,56 @@
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { useState } from "react";
+import MenuIcon from '@mui/icons-material/Menu';
 
-import 'react-tabs/style/react-tabs.css';
+import "react-tabs/style/react-tabs.css";
 
-import { TabCards } from './cards/TabCards';
- import TabCardList from './cards/TabCardList';
- import './TabsDisplayer.css'
+import { TabCards } from "./cards/TabCards";
+import TabCardList from "./cards/TabCardList";
+import "./TabsDisplayer.css";
 
-function TabsDisplayer () {
+function TabsDisplayer() {
+  const [showTabs, setShowTabs] = useState(false);
   return (
-  <Tabs selectedTabClassName="activeTab">
-    <TabList >
-      <Tab >Domains</Tab>
-      <Tab >Web Hosting</Tab>
-      <Tab >Dedicated Servers</Tab>
-      <Tab >Virtual Cloud Servers</Tab>
-      <Tab >WordPress Hosting</Tab>
-      <Tab >Email Hosting</Tab>
-      <Tab >VPS Hosting Servers</Tab>
-      <Tab >Free Hosting</Tab>
-    </TabList>
+    <Tabs selectedTabClassName="activeTab">
+      <button onClick={() => setShowTabs(!showTabs)} className={"toggler"}>
+        <div className="icon"> <MenuIcon color="primary" fontSize="large" /></div> 
+      </button>
+      <TabList className={!showTabs ? "react-tabs__tab-list hide" : "react-tabs__tab-list"}>
+        <Tab>Domains</Tab>
+        <Tab>Web Hosting</Tab>
+        <Tab>Dedicated Servers</Tab>
+        <Tab>Virtual Cloud Servers</Tab>
+        <Tab>WordPress Hosting</Tab>
+        <Tab>Email Hosting</Tab>
+        <Tab>VPS Hosting Servers</Tab>
+        <Tab>Free Hosting</Tab>
+      </TabList>
 
-    <TabPanel>
-      <TabCardList list={TabCards[0]}/>
-    </TabPanel>
-    <TabPanel>
-    <TabCardList list={TabCards[1]} />
-    </TabPanel>
-    <TabPanel>
-    <TabCardList list={TabCards[2]} />
-    </TabPanel>
-    <TabPanel>
-    <TabCardList list={TabCards[3]} />
-    </TabPanel>
-    <TabPanel>
-    <TabCardList list={TabCards[4]} />
-    </TabPanel>
-    <TabPanel>
-    <TabCardList list={TabCards[5]} />
-    </TabPanel>
-    <TabPanel>
-    <TabCardList list={TabCards[6]} />
-    </TabPanel>
-    <TabPanel>
-    <TabCardList list={TabCards[7]} />
-    </TabPanel>
-  </Tabs>
+      <TabPanel>
+        <TabCardList list={TabCards[0]} />
+      </TabPanel>
+      <TabPanel>
+        <TabCardList list={TabCards[1]} />
+      </TabPanel>
+      <TabPanel>
+        <TabCardList list={TabCards[2]} />
+      </TabPanel>
+      <TabPanel>
+        <TabCardList list={TabCards[3]} />
+      </TabPanel>
+      <TabPanel>
+        <TabCardList list={TabCards[4]} />
+      </TabPanel>
+      <TabPanel>
+        <TabCardList list={TabCards[5]} />
+      </TabPanel>
+      <TabPanel>
+        <TabCardList list={TabCards[6]} />
+      </TabPanel>
+      <TabPanel>
+        <TabCardList list={TabCards[7]} />
+      </TabPanel>
+    </Tabs>
   );
 }
 export default TabsDisplayer;
