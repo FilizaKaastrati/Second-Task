@@ -39,7 +39,7 @@ const Toggle = () => {
   const [nestedQuestions] = useState(nestedData);
 
   const renderedNestedQuestions = nestedQuestions.map((item, index) => {
-    return <ToggleItem key={index} title={item.title} icon={item.icon}  body={item.info} />;
+    return <ToggleItem key={index} title={item.title} icon={item.icon} body={item.info}/>;
   });
 
   return (
