@@ -3,7 +3,7 @@ import ExpandLessOutlinedIcon from "@mui/icons-material/ExpandLessOutlined";
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 
-const ToggleItem = ({ title, body, isNested, icon,items}) => {
+const ToggleItem = ({ title, body, isNested, icon}) => {
   const [expanded, setExpanded] = useState(false);
  
 
